@@ -1,89 +1,74 @@
-# 🤖 Agentic AI Customer Churn Prediction & Retention Platform
+# 🤖 Agentic AI Customer Churn Prediction & Retention System
 
-An end-to-end **Agentic AI Customer Retention System** that combines Machine Learning-based churn prediction with autonomous AI agents to identify high-risk customers and generate personalized retention strategies.
+An end-to-end **Machine Learning + Agentic AI** system that predicts customer churn and automatically generates personalized retention strategies.
 
-The system uses a **Random Forest model** to predict customer churn probability and **CrewAI + Groq LLMs** to analyze high-risk customers and generate structured retention plans.
+## 📌 Overview
 
----
+The system combines a **Random Forest Classifier** with a **CrewAI retention agent powered by Groq (`openai/gpt-oss-120b`)**.
 
-## 🚀 Release v1.0.0
+It identifies high-risk customers, generates personalized retention plans, simulates customer responses, and stores the outcomes in a closed-loop workflow.
 
-### 📌 Overview
+## 🚀 Key Features
 
-**Agentic AI Customer Churn Prediction & Retention Platform** combines:
+* 📊 Customer churn prediction using Random Forest
+* ⚠️ High-risk customer identification (>70% churn probability)
+* 🤖 Autonomous retention strategies using CrewAI + Groq
+* 📋 Structured AI outputs using Pydantic
+* 🔄 Closed-loop customer response simulation
+* 📈 Interactive Streamlit dashboard
+* 💾 Automated retention outcome persistence
 
-- Predictive Machine Learning
-- AI-powered customer analysis
-- Autonomous agent workflows
-- Structured retention recommendations
-- Customer response simulation
-- Closed-loop feedback
-- Interactive Streamlit dashboard
+## 📊 Results
 
-The platform moves beyond simply predicting churn by connecting **prediction → AI reasoning → retention action → customer response → feedback**.
+* **7,043** customer records analyzed
+* **1,836** high-risk customers identified
+* **100%** JSON schema compliance
+* **80.6%** simulated retention rate
 
----
+## 🛠️ Tech Stack
 
-## 🧠 System Architecture
+**Python • Scikit-learn • Random Forest • Pandas • NumPy • CrewAI • Groq • Pydantic • Streamlit**
+
+## 🔄 Workflow
 
 ```text
-                    ┌─────────────────────┐
-                    │   Customer Dataset  │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │  Data Preprocessing │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │  Random Forest ML   │
-                    │  Churn Prediction   │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ High-Risk Filtering │
-                    │ Probability > 70%  │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │    CrewAI Agent     │
-                    │ Customer Retention  │
-                    │    Specialist       │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │     Groq LLM        │
-                    │ openai/gpt-oss-120b │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-              ┌─────────────────────────────────┐
-              │ Structured Retention Strategy   │
-              │                                 │
-              │ • Churn Driver                  │
-              │ • Tailored Incentive            │
-              │ • Outreach Message              │
-              └───────────────┬─────────────────┘
-                              │
-                              ▼
-                    ┌─────────────────────┐
-                    │ Customer Response   │
-                    │    Simulation       │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ Conversion / Outcome│
-                    │      Tracking       │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │   Feedback Loop     │
-                    │ Improve Retention   │
-                    └─────────────────────┘
+Customer Data
+     ↓
+Churn Prediction
+     ↓
+High-Risk Customers
+     ↓
+CrewAI Retention Agent
+     ↓
+Personalized Retention Plan
+     ↓
+Customer Response Simulation
+     ↓
+Closed-Loop Results
+```
+
+## ▶️ Run the Project
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+Add your Groq API key to `.env`:
+
+```env
+GROQ_API_KEY=your_api_key
+```
+
+## 🎓 Project
+
+**Final Capstone Project — Elevate Labs**
+
+> **Predict → Analyze → Act → Learn**
+
+The project demonstrates how traditional predictive ML can be combined with Agentic AI to transform churn prediction into automated customer retention.
+
+## 👩‍💻 Author
+
+**Sreya S.**
+MSc Data Science & Business Analysis
